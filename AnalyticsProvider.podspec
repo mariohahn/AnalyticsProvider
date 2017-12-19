@@ -21,15 +21,13 @@ Pod::Spec.new do |s|
 Protocol to track Events...
                        DESC
 
-  s.homepage         = 'https://github.com/mario_hahn'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/mariohahn'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mario Hahn' => 'mh@tailored-apps.com' }
   s.source           = { :git => 'https://github.com/mariohahn/AnalyticsProvider.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.tvOS.deployment_target = '10.0'
+  s.tvos.deployment_target = '10.0'
 
   s.source_files = 'AnalyticsProvider/**/*'
 end
