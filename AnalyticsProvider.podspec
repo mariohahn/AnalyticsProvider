@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnalyticsProvider'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Protocol to track Events'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ Protocol to track Events...
   s.source           = { :git => 'https://github.com/mariohahn/AnalyticsProvider.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.tvos.deployment_target = '10.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source_files = 'AnalyticsProvider/**/*'
 end
