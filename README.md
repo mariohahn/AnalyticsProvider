@@ -6,6 +6,9 @@
 pod 'AnalyticsProvider'
 ```
 
+## Answers Support 
+https://github.com/mariohahn/AnswersAnalytics
+
 ## Usage
 
 ```swift
