@@ -29,5 +29,5 @@ Protocol to track Events...
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'AnalyticsProvider/**/*'
+  s.source_files = 'AnalyticsProvider/**/*.{h,m,swift}'
 end
