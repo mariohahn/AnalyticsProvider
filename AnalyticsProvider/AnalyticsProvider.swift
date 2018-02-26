@@ -15,11 +15,15 @@ public protocol ViewType {
 }
 
 public protocol EventType {
-    var name: String { get }
+    var action: String { get }
+    var category: String { get }
+    var label: String? { get }
+    
     var parameters: [String: Any]? { get }
 }
 
-public protocol PurchaseType: EventType {
+public protocol PurchaseType {
+    var id: String { get }
     var price: Double { get }
     var currency: String { get }
     var success: Bool { get }
