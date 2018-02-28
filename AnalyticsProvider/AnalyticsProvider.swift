@@ -14,7 +14,7 @@ public protocol ViewType {
     var parameters: [AnyHashable: Any]? { get }
 }
 
-extension ViewType {
+public extension ViewType {
     
     var parameters: [AnyHashable: Any]? {
         return nil
@@ -29,7 +29,7 @@ public protocol EventType {
     var parameters: [AnyHashable: Any]? { get }
 }
 
-extension EventType {
+public extension EventType {
     
     var label: String? {
         return nil
