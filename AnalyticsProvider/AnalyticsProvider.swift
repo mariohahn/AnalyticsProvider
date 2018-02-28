@@ -11,15 +11,37 @@ import UIKit
 
 public protocol ViewType {
     var name: String { get }
-    var parameters: [String: Any]? { get }
+    var parameters: [AnyHashable: Any]? { get }
+}
+
+extension ViewType {
+    
+    var parameters: [AnyHashable: Any]? {
+        return nil
+    }
 }
 
 public protocol EventType {
     var action: String { get }
     var category: String { get }
     var label: String? { get }
+    var value: Double? { get }
+    var parameters: [AnyHashable: Any]? { get }
+}
+
+extension EventType {
     
-    var parameters: [String: Any]? { get }
+    var label: String? {
+        return nil
+    }
+    
+    var value: Double? {
+        return nil
+    }
+    
+    var parameters: [AnyHashable: Any]? {
+        return nil
+    }
 }
 
 public protocol PurchaseType {
@@ -56,3 +78,4 @@ public struct Analytics {
         instance.providers.forEach { $0.log(purchase) }
     }
 }
+
