@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public protocol ViewType {
     var name: String { get }
