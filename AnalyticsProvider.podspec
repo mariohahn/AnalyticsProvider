@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AnalyticsProvider'
-  s.version          = '1.5.0'
+  s.version          = '1.6.0'
   s.summary          = 'Protocol to track Events'
 
 # This description is used to generate tags and improve search results.
@@ -28,6 +28,8 @@ Protocol to track Events...
 
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = "2.0"
+  s.osx.deployment_target = "10.11"
 
-  s.source_files = 'AnalyticsProvider/**/*.{h,m,swift}'
+  s.source_files = 'AnalyticsProvider/**/*.swift'
 end
