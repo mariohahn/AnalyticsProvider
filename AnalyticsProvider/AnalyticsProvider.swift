@@ -44,10 +44,18 @@ public extension EventType {
 }
 
 public protocol PurchaseType {
-    var id: String { get }
+    var transactionId: String { get }
     var price: Double { get }
     var currency: String { get }
+    var category: String { get }
+    var sku: String { get }
     var success: Bool { get }
+}
+
+extension PurchaseType {
+    var transactionId: String {
+        return UUID().uuidString
+    }
 }
 
 public protocol AnalyticsProvider {
