@@ -52,7 +52,7 @@ public protocol PurchaseType {
     var success: Bool { get }
 }
 
-extension PurchaseType {
+public extension PurchaseType {
     var transactionId: String {
         return UUID().uuidString
     }
