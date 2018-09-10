@@ -46,6 +46,7 @@ public extension EventType {
 public protocol PurchaseType {
     var transactionId: String { get }
     var price: Double { get }
+    var name: String { get }
     var currency: String { get }
     var category: String { get }
     var sku: String { get }
