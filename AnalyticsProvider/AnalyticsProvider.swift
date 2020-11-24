@@ -63,6 +63,8 @@ public protocol AnalyticsProvider {
     func log(_ view: ViewType)
     func log(_ event: EventType)
     func log(_ purchase: PurchaseType)
+
+    func setUserProperty(_ value: String?, for key: String)
 }
 
 public struct Analytics {
@@ -84,6 +86,10 @@ public struct Analytics {
     
     public static func log(_ purchase: PurchaseType) {
         instance.providers.forEach { $0.log(purchase) }
+    }
+
+    public static func setUserProperty(_ value: String?, for key: String) {
+        instance.providers.forEach { $0.setUserProperty(value, for: key) }
     }
 }
 
