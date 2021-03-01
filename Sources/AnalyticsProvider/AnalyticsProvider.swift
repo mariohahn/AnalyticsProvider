@@ -14,7 +14,7 @@ public protocol ViewType {
 }
 
 public extension ViewType {
-    
+
     var parameters: [AnyHashable: Any]? {
         return nil
     }
@@ -29,15 +29,15 @@ public protocol EventType {
 }
 
 public extension EventType {
-    
+
     var label: String? {
         return nil
     }
-    
+
     var value: Double? {
         return nil
     }
-    
+
     var parameters: [AnyHashable: Any]? {
         return nil
     }
@@ -68,22 +68,22 @@ public protocol AnalyticsProvider {
 }
 
 public struct Analytics {
-    
+
     private static var instance = Analytics()
     private var providers = [AnalyticsProvider]()
-    
+
     public static func register(providers analyticsProviders: [AnalyticsProvider]) {
         instance.providers.append(contentsOf: analyticsProviders)
     }
-    
+
     public static func log(_ view: ViewType) {
         instance.providers.forEach { $0.log(view) }
     }
-    
+
     public static func log(_ event: EventType) {
         instance.providers.forEach { $0.log(event) }
     }
-    
+
     public static func log(_ purchase: PurchaseType) {
         instance.providers.forEach { $0.log(purchase) }
     }
