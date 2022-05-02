@@ -10,12 +10,12 @@ import Foundation
 
 public protocol ViewType {
     var name: String { get }
-    var parameters: [AnyHashable: Any]? { get }
+    var parameters: [AnyHashable: AnyHashable]? { get }
 }
 
 public extension ViewType {
 
-    var parameters: [AnyHashable: Any]? {
+    var parameters: [AnyHashable: AnyHashable]? {
         return nil
     }
 }
@@ -25,7 +25,7 @@ public protocol EventType {
     var category: String { get }
     var label: String? { get }
     var value: Double? { get }
-    var parameters: [AnyHashable: Any]? { get }
+    var parameters: [AnyHashable: AnyHashable]? { get }
 }
 
 public extension EventType {
@@ -38,7 +38,7 @@ public extension EventType {
         return nil
     }
 
-    var parameters: [AnyHashable: Any]? {
+    var parameters: [AnyHashable: AnyHashable]? {
         return nil
     }
 }
